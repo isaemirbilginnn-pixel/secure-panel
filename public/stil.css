@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: system-ui;
+    background: radial-gradient(circle at top, #0b1220, #050816);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* animasyonlu arka plan */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #00e5ff22, transparent 40%);
+    animation: move 8s infinite linear;
+    z-index: -1;
+}
+
+@keyframes move {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(-100px, 50px); }
+    100% { transform: translate(0,0); }
+}
+
+/* SIDEBAR ULTRA */
+.menu {
+    width: 240px;
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(15px);
+    border-right: 1px solid #00e5ff33;
+    transition: 0.4s;
+}
+
+/* GLASS CARDS */
+.kart {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid #00e5ff22;
+    border-radius: 16px;
+    padding: 20px;
+    transition: 0.4s;
+}
+
+/* HOVER ULTRA EFFECT */
+.kart:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 40px #00e5ff55;
+}
+
+/* NEON TEXT */
+h1, h2, h3 {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff33;
+}
+
+/* BUTTON ULTRA */
+button {
+    background: linear-gradient(90deg, #00e5ff, #4f46e5);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* GRID */
+.kartlar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .kartlar {
+        grid-template-columns: 1fr;
+    }
+}

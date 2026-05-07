@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kontrol Paneli</title>
+
+    <link rel="stylesheet" href="stil.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="menu kayar">
+
+        <h2>MENÜ</h2>
+
+        <button onclick="toggleMenu()">Menü</button>
+        <button onclick="cikis()">Çıkış Yap</button>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="icerik">
+
+        <h1>Kontrol Paneli</h1>
+
+        <div class="kartlar">
+
+            <div class="kart parlayan">
+                <h3>Kullanıcılar</h3>
+                <p id="users">Yükleniyor...</p>
+            </div>
+
+            <div class="kart parlayan">
+                <h3>Sunucular</h3>
+                <p id="servers">Yükleniyor...</p>
+            </div>
+
+            <div class="kart parlayan">
+                <h3>Güvenlik</h3>
+                <p>Aktif</p>
+            </div>
+
+        </div>
+
+        <div class="grafik-kutu">
+            <canvas id="sistemGrafik"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="panel.js"></script>
+</body>
+</html>
